@@ -36,6 +36,7 @@ header{
     margin-left: 11.87px;
 }
 .info-covid-19>span:nth-child(4){
+    z-index: 1;
     width: 16.3020833333%;
     font-size: 13px;
     line-height: 18px;
@@ -94,6 +95,30 @@ header{
     text-decoration: none;
     color: #5F6D7C;
 }
+.for-search{
+    display: none;
+}
+.www{
+    width: 40.0380116959%;
+    align-items: center;
+  justify-content: space-between;
+    white-space: nowrap;
+}
+.header>.bbb {
+    padding-left: 0px;
+    position: absolute;
+    right: 14%;
+}
+.www>div>input{
+    border: white solid 0px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 10px;
+}
+.www>div>input::placeholder{
+    color: #C9C9C9;
+}
 .header-icons{
     display: flex;
     padding-left: 18.2%;
@@ -104,6 +129,11 @@ header{
 .header-icons>div:nth-child(2){
     margin-right: 45px;
     margin-left: 45px;
+}
+.header-icons>div>div>p{
+    font-size: 10px;
+    line-height: 14px;
+    color: #5F6D7C;
 }
 .header-icons>div>p{
     font-size: 10px;
@@ -232,7 +262,7 @@ cursor: pointer;
     font-size: 14px;
     line-height: 19px;
     color: #5F6D7C;
-    padding-bottom: 25px;
+    margin-bottom: 25px;
     border-bottom: 1px solid #C9C9C9;
 }
 .category-menu>div{
@@ -368,20 +398,23 @@ border-radius: 1px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    grid-column-gap: 2.6%;
+    grid-column-gap: 1%;
 }
 .products>div>img{
     width: 100%;
 }
 .products>div{
     position: relative;
-    width: 250px;
+    width: 24.2%;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0px 8px 30px rgba(50, 94, 137, 0.4);
     border-radius: 10px;
     margin-bottom: 50px;
+}
+.products>div:hover{
+    transform: scale(1.015);
 }
 .products>div>p:first-of-type{
     font-size: 15px;
@@ -540,6 +573,86 @@ input[type=checkbox] {
 .filter-for-tablete{
     display: none;
 }
+/*
+    for js
+*/
+.category-menu{
+    display: block;
+}
+ .open-svg{
+    display: none;
+}
+.leng-menu{
+    display: none;
+}
+.leng-menu>p{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 1.5;
+    padding-top: 6px;
+    white-space: nowrap;
+    letter-spacing: 0.00938em;
+    padding-bottom: 6px;
+}
+.leng-menu>p:hover{
+    background-color: #201f1f2f;
+    
+}
+
+.leng-menu1 {
+    z-index: 1;
+    display: block;
+    width: 40px;
+    background:white ;
+    box-shadow: 0px 8px 30px rgb(50 94 137 / 40%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+ .leng1 .close-leng{
+    transform: rotate(180deg);
+}
+.active .category-menu {
+    max-height: 0px;
+    overflow: hidden;
+}
+.active .close-svg{
+    transform: rotate(180deg);
+}
+
+
+
+.active .close-svg {
+    transform: rotate(180deg);
+}
+
+
+/*
+for heart
+*/
+.now>path {
+    fill:red;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	transform: scale(1);
+	
+}
+.search-close{
+    display: none;
+}
+.search-close>svg{
+margin-left: 8px;
+}
+
+
+
+
+
 /* 
 
     END 1920PX
@@ -549,7 +662,10 @@ input[type=checkbox] {
 */
 @media  screen and (max-width: 1500px){
     .products>div{
-        width: 210px;
+        width: 32%;
+    }
+    .www{
+        width: 37%;
     }
 }
 @media  screen and (max-width: 1400px) {
@@ -576,6 +692,7 @@ input[type=checkbox] {
     .info-covid-19>span:nth-child(4){
         width: 9.3%;
         padding-left: 40px;
+
     }
     .header-menu-child{
         font-size: 14px;
@@ -595,9 +712,7 @@ input[type=checkbox] {
         margin-right: 8px;
         margin-left: 8px;
     }
-    .products>div{
-        width: 180px;
-    }
+    
     .products>div>img{
         width: 100%;
     }
@@ -885,6 +1000,7 @@ input[type=checkbox] {
         height: 62px;
     }
     .header{
+        position: relative;
         height: 62px;
         padding-right: 4%;
         padding-left: 4%;
@@ -898,6 +1014,9 @@ input[type=checkbox] {
     }
     .header-icons{
         padding-left: 0;
+    }
+    .header-menu-child{
+        display: none;
     }
     .header-icons>div:nth-child(2){
         display: none;
